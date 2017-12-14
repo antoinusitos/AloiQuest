@@ -7,6 +7,7 @@ public class GamepadManager : BaseManager
 {
 
     private float _triggerDeadZone = 0.5f;
+    private float _stickDeadZone = 0.1f;
 
     public int playerNumber;
 
@@ -60,6 +61,11 @@ public class GamepadManager : BaseManager
     public float GetStickPosY(int playerIndex)
     {
         return _state[playerIndex].ThumbSticks.Left.Y;
+    }
+
+    public float GetStickDeadZone()
+    {
+        return _stickDeadZone;
     }
 
     public bool RightShoulderPressed(int playerIndex)
