@@ -33,7 +33,8 @@ public class UIManager : BaseManager
     private void Start()
     {
         _allImages = new List<GameObject>();
-        backGroundSize = allItems.parent.GetComponent<RectTransform>();
+        if(allItems != null)
+            backGroundSize = allItems.parent.GetComponent<RectTransform>();
         HideObjectName();
     }
 

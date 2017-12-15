@@ -9,7 +9,7 @@ public class GamepadManager : BaseManager
     private float _triggerDeadZone = 0.5f;
     private float _stickDeadZone = 0.1f;
 
-    public int playerNumber;
+    public int playerNumber = 1;
 
     private List<PlayerIndex> _playerIndex;
     private List<GamePadState> _state;

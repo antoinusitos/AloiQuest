@@ -36,7 +36,8 @@ public class PlayerManager : BaseManager
 
     private void Update()
     {
-        lifeBar.value = (float)_currentLife / (float)_maxLife;
+        if(lifeBar != null)
+            lifeBar.value = (float)_currentLife / (float)_maxLife;
         if (_currentPlayerState == PlayerState.Dead)
         {
             _currentTimeToRespawn += Time.deltaTime;
